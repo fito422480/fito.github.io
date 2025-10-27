@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fito — Portfolio</title>
+  <meta name="description" content="Portfolio de Fito — proyectos, contacto y sobre mí." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicons simple -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="/">Fito</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Hola, soy <span class="accent">Fito</span></h1>
+          <p class="lead">Ingeniero de software · desarrollador full-stack · amante de las soluciones limpias y escalables.</p>
+          <p class="cta-row">
+            <a class="btn" href="#projects">Ver proyectos</a>
+            <a class="btn ghost" href="#contact">Contactarme</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <ul>
+            <li><strong>Stack:</strong> Node.js · React · Next.js · Python</li>
+            <li><strong>Herramientas:</strong> Docker · AWS · PostgreSQL</li>
+            <li><strong>Actualmente:</strong> Construyendo soluciones de lending & fintech</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>Sobre mí</h2>
+      <p>Soy desarrollador con experiencia en backend y frontend. Me interesa la arquitectura de sistemas, performance y buenas prácticas de desarrollo. Me gusta resolver problemas complejos y documentar soluciones claras.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Experiencia</h3>
+          <p>Proyectos en sistemas de préstamos, APIs, ETL y automatización de cargas.</p>
+        </div>
+        <div class="card">
+          <h3>Habilidades</h3>
+          <p>APIs REST/GraphQL, bases de datos, infra como código, pruebas automatizadas.</p>
+        </div>
+        <div class="card">
+          <h3>Contacto</h3>
+          <p>¿Quieres colaborar? Escríbeme abajo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Proyectos destacados</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <h3>App lending</h3>
+          <p>Pipeline de extracción/transformación y carga, integración con proveedores y S3.</p>
+          <p class="small">Tecnologías: Python · AWS Lambda · S3 · DynamoDB</p>
+        </article>
+        <article class="project">
+          <h3>Dashboard Streamlit</h3>
+          <p>UI/UX moderno para la visualización y carga de ofertas, con filtros y exportación CSV.</p>
+          <p class="small">Tecnologías: Streamlit · Pandas · S3</p>
+        </article>
+        <article class="project">
+          <h3>Portal Next.js</h3>
+          <p>Frontend con autenticación, gestión de documentos y generación de PDFs.</p>
+          <p class="small">Tecnologías: Next.js · Tailwind · Firebase</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contacto</h2>
+      <p>Usa el formulario o envíame un correo a <a href="mailto:tu-email@example.com">tu-email@example.com</a></p>
+
+      <form id="contactForm" class="contact-form" action="mailto:tu-email@example.com" method="post" enctype="text/plain">
+        <label>
+          Nombre
+          <input name="name" type="text" required />
+        </label>
+        <label>
+          Correo
+          <input name="email" type="email" required />
+        </label>
+        <label>
+          Mensaje
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="form-row">
+          <button type="submit" class="btn">Enviar</button>
+          <button type="button" id="copyEmail" class="btn ghost">Copiar email</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Fito — Hecho con ❤️</p>
+      <p class="foot-links">
+        <a href="https://github.com/fito" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="h
