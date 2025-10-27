@@ -113,4 +113,43 @@
       <p>© <span id="year"></span> Fito — Hecho con ❤️</p>
       <p class="foot-links">
         <a href="https://github.com/fito" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="h
+        <a href="https://linkedin.com/in/fito" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Pequeñas interacciones
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle mobile nav
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+
+    // Copiar email
+    document.getElementById('copyEmail').addEventListener('click', () => {
+      navigator.clipboard?.writeText('tu-email@example.com').then(() => {
+        alert('Email copiado al portapapeles.');
+      }).catch(() => {
+        alert('No se pudo copiar. Usa el enlace de correo.');
+      });
+    });
+
+    // Suave scroll para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
